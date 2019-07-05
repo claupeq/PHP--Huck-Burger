@@ -1,0 +1,21 @@
+<? php
+$ nome   =  $ _POST [ " nome " ];
+$ telefone  =  $ _POST [ " telefone " ];
+$ pontodecarne  =  $ _POST [ " pontodecarne " ];
+$ pao =  $ _POST [ " pao " ];
+$ queijo  =  $ _POST [ " queijo " ];
+$ observacao  =  $ _POST [ " observacao " ];
+include_once  ' conexao.php ' ;
+$ sql  =  " insira nos valores dos pedidos (null, ' $ nome ', ' $ telefone ', ' $ pontodecarne ', ' $ pao ', ' $ queijo ', ' $ observacao ',) " ;
+if ( $ nome  ! =  " "  &&  $ telefone  ! =  " "  &&  $ pontodecarne  ! =  " "  $ pao  ! =  " "  &&  $ queijo  ! =  " "  &&  $ observacao  ! =  " " ) {
+  if ( mysqli_query ( $ con , $ sql )) {
+      echo " Gravado com sucessso! " ;
+  } mais {
+    echo " Erro ao gravar! " ;
+  }  
+    
+} mais {
+    echo " Preencha todos os campos " ;
+}
+mysqli_close ( $ con );
+? >
